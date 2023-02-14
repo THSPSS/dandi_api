@@ -1,7 +1,7 @@
 import {db} from "../db.js"
 
 export const getRecords = (req,res)=>{
-   const q = "SELECT id, location_no, datetime FROM dandi.member m JOIN dandi.record r ON m.no = r.member_no";
+   const q = "SELECT id, location_no, datetime FROM member m JOIN record r ON m.no = r.member_no";
 
    db.query(q, (err,data)=>{
     if(err) return res.send(err)
@@ -13,7 +13,7 @@ export const getRecords = (req,res)=>{
 
 export const getRecord = (req,res)=>{
     let member_no = req.params.member_no;
-    const q = `SELECT id, location_no, datetime FROM dandi.member m JOIN dandi.record r ON m.no = r.member_no WHERE member_no = ?`;
+    const q = `SELECT id, location_no, datetime FROM member m JOIN record r ON m.no = r.member_no WHERE member_no = ?`;
  
     db.query(q, member_no , (err,data)=>{
      if(err) return res.send(err)
@@ -24,7 +24,7 @@ export const getRecord = (req,res)=>{
 
 
 export const addRecord = (req,res)=>{
-    const q = "INSERT INTO dandi.record(datetime, location_no , member_no) VALUES (?)";
+    const q = "INSERT INTO record(datetime, location_no , member_no) VALUES (?)";
 
     const values = [
         req.body.datetime,

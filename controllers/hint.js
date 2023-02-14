@@ -1,7 +1,7 @@
 import {db} from "../db.js"
 
 export const getHints = (req,res)=>{
-   const q = "SELECT * FROM dandi.hint";
+   const q = "SELECT * FROM hint";
 
    db.query(q, (err,data)=>{
     if(err) return res.send(err)
@@ -12,7 +12,7 @@ export const getHints = (req,res)=>{
 
 
 export const getHint = (req,res)=>{
-   const q = "SELECT * FROM dandi.hint WHERE location_no = ?";
+   const q = "SELECT * FROM hint WHERE location_no = ?";
 
    db.query(q,[req.params.location_no], (err,data)=>{
     if(err) return res.send(err)

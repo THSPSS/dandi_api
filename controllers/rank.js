@@ -1,7 +1,7 @@
 import {db} from "../db.js"
 
 export const getRanks = (req,res)=>{
-   const q = "SELECT * FROM dandi.member_rank";
+   const q = "SELECT * FROM member_rank";
 
    db.query(q, (err,data)=>{
     if(err) return res.send(err)

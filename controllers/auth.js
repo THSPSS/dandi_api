@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 export const register = (req, res)=>{
 
     //CHECK EXISTING USER
-    const q = "SELECT * FROM dandi.member WHERE id = ?";
+    const q = "SELECT * FROM member WHERE id = ?";
 
     db.query(q,[req.body.id], (err,data)=>{
         if(err) return res.json(err);
@@ -15,7 +15,7 @@ export const register = (req, res)=>{
         const salt = bcrypt.genSaltSync(10);
         const hash = bcrypt.hashSync(req.body.pass, salt);
 
-        const q = "INSERT INTO dandi.member(`id`,`pass`) VALUES (?)"
+        const q = "INSERT INTO member(`id`,`pass`) VALUES (?)"
         const values = [
             req.body.id,
             hash,

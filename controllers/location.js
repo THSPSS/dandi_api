@@ -1,7 +1,7 @@
 import {db} from "../db.js"
 
 export const getLocations = (req,res)=>{
-   const q = "SELECT * FROM dandi.location";
+   const q = "SELECT * FROM location";
 
    db.query(q, (err,data)=>{
     if(err) return res.send(err)
