@@ -1,11 +1,15 @@
 import {db} from "../db.js"
 
 export const getMembers = (req,res)=>{
-   const q = "SELECT * FROM member";
+   //아이디 중복체크
+   const id = req.query.id
 
-   db.query(q, (err,data)=>{
+   const q = id ? "SELECT id FROM member WHERE id = ? " : "SELECT id,point FROM member" 
+
+   db.query(q,[id], (err,data)=>{
     if(err) return res.send(err)
 
     return res.status(200).json(data);
    })
 }
+
