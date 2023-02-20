@@ -45,7 +45,7 @@ export const login = (req, res)=>{
 
         //create token store token to cookie
         const token = jwt.sign({no:data[0].no},"jwtkey");
-        const {password, ...other} = data[0]
+        const {pass, ...other} = data[0]
 
         res.cookie("access_token",token,{
             httpOnly:true
