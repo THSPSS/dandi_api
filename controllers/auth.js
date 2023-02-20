@@ -32,7 +32,7 @@ export const register = (req, res)=>{
 export const login = (req, res)=>{
     //CHECK USER
 
-    const q = "SELECT * FROM dandi.member WHERE id = ?"
+    const q = "SELECT * FROM member WHERE id = ?"
 
     db.query(q,[req.body.id], (err,data)=>{
         if(err) return res.json(err);
