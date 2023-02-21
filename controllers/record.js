@@ -64,19 +64,30 @@ export const getStampRecord = (req,res)=>{
 
 
 
+//qr code
 export const addRecord = (req,res)=>{
-    const q = "INSERT INTO record(datetime, location_no , member_no) VALUES (?)";
+
+
+    const q = "SELECT * FROM record WHERE member_no = ? AND location_no = ? "
+
 
     const values = [
-        req.body.datetime,
-        req.body.location_no,
         req.body.member_no,
+        req.body.location_no,
     ]
 
- 
-    db.query(q, [values], (err,data)=>{
+    db.query(q, values , (err,data)=>{
      if(err) return res.send(err)
- 
-     return res.status(200).json("record has been created.");
+     if(data.length) return res.status(409).json({code:"NO",message:"이미 인증하신 장소입니다."});
+
+      const q = "INSERT INTO record(member_no ,location_no) VALUES (?,?)";
+
+     
+     db.query(q, values, (err,data)=>{
+      if(err) return res.json(err);
+      return res.status(201).json({code:"OK",message:"record has been created."});
     })
- }
+
+
+    });
+ };
