@@ -1,6 +1,6 @@
 <h1>About this project</h1>
 
-![image](https://user-images.githubusercontent.com/111225654/228878625-88cd6261-2c82-40c6-bed4-a45db70eaf28.png)
+![image](https://user-images.githubusercontent.com/111225654/228879045-4639d39e-5b1c-4b00-b01a-cebadd441125.png)
 
 
 
