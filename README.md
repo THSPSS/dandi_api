@@ -1,6 +1,7 @@
 <h1>About this project</h1>
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/111225654/228867114-cca75a7f-89d7-4320-ba73-1c24c69fa01c.png)
+
 
 
 -----
