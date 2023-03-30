@@ -1,6 +1,7 @@
 <h1>About this project</h1>
 
-![image](https://user-images.githubusercontent.com/111225654/228866652-c9cce07a-fc8d-416b-acc7-2af6e160fbe7.png)
+![Uploading image.png…]()
+
 
 -----
 <p>도시 투어 스탬프 어플리케이션 'DANDI' 서버 입니다.</p>
