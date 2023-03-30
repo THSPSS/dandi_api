@@ -6,7 +6,7 @@
 얻고 방문하여 스탬프를 받는 과정까지 구현하였습니다.</p>
 <p>DANDI 전용 Rest API를 만들어 회원 정보 입력, 스탬프 내역과 장소에 대한 정보를 받을 수 있게 만들었습니다</p>
 
-👉 단디 홈페이지: <a href="https://api-fvwt.onrender.com" target="_blank"/>Live Demo</a>
+👉 단디 홈페이지: <a href="https://dandi21.netlify.app/" target="_blank"/>Live Demo</a>
 
 <h2>Build with:</h2>
 1)Node.js , express 
