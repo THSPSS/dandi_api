@@ -1,4 +1,7 @@
 <h1>About this project</h1>
+
+![image](https://user-images.githubusercontent.com/111225654/228866652-c9cce07a-fc8d-416b-acc7-2af6e160fbe7.png)
+
 -----
 <p>도시 투어 스탬프 어플리케이션 'DANDI' 서버 입니다.</p>
 <p>DANDI는 지역경제 활성화를 목적으로 다양한 명소로 관광객의 유치를 기원하며 만든 앱입니다.</p>
